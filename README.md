@@ -1,4 +1,9 @@
 
+
+### IMPORTANT NOTE ##
+
+I was unable to successfully execute the code on "Jupyter notebook" on my Mac. So, used Google Colab to complete the assignment. 
+
 ## Dev
 
 I use Jupyter notebook to write the Python code, this code is built in Jupyter notebook on a Mac PC. 
@@ -39,33 +44,33 @@ Read the applicants_data.csv file into a Pandas DataFrame. Review the DataFrame,
 
 Encode the dataset’s categorical variables using OneHotEncoder, and then place the encoded variables into a new DataFrame.
 
-        # Create a list of categorical variables
-        categorical_variables =  list(applicant_data_df.dtypes[applicant_data_df.dtypes == "object"].index)
-
-        # Display the categorical variables list
-        categorical_variables
-
-        ['APPLICATION_TYPE',
-        'AFFILIATION',
-        'CLASSIFICATION',
-        'USE_CASE',
-        'ORGANIZATION',
-        'INCOME_AMT',
-        'SPECIAL_CONSIDERATIONS']
-
-	
-Add the original DataFrame’s numerical variables to the DataFrame containing the encoded variables.
-
 ![](Categorical%20Variables.png)
 
-Using the preprocessed data, create the features (X) and target (y) datasets. The target dataset should be defined by the preprocessed DataFrame column “IS_SUCCESSFUL”. The remaining columns should define the features dataset.
+OneHotEncoder
 
+![](OneHotEncoder.png)
+	
+Added the original DataFrame’s numerical variables to the DataFrame containing the encoded variables.
+
+![](EncodedVariables.png)
+
+Using the preprocessed data, created the features (X) and target (y) datasets. The target dataset should be defined by the preprocessed DataFrame column “IS_SUCCESSFUL”. The remaining columns should define the features dataset.
+
+** y data frame **
+
+![](y.png)
+
+** X data frame **
+
+![](X.png)
 
 Split the features and target sets into training and testing datasets.
 
+![](SplitData-Train-Test.png)
 
 Use scikit-learn's StandardScaler to scale the features data.
 
+![](StandardScaler_Scaled_Data.png)
 
 ### Compile and Evaluate a Binary Classification Model Using a Neural Network
 
@@ -73,50 +78,54 @@ To do so, complete the following steps:
 
 Created a deep neural network by assigning the number of input features, the number of layers, and the number of neurons on each layer using Tensorflow’s Keras.
 
+Number of input features is 116 always which is essentially the number of columns in X data frame..
 
-Compile and fit the model using the binary_crossentropy loss function, the adam optimizer, and the accuracy evaluation metric.
+![](InputFeatures_A.png)
 
+Number of neurons for Ouput layer is = number_input_features * 2/3 or it can be approximately half of number of features as well...
 
-Evaluate the model using the test data to determine the model’s loss and accuracy.
+![](NumberofNeurons_OutputLayer.png)
 
+Number of Neurons for first hidden layer is = (number_input_features + number_output_neurons) // 2
+
+![](Neurons_hidden_layer_1.png)
+
+Number of Neurons for second hidden layer is = layer1 + number_output_neurons) // 2+
+
+![](Neurons_hidden_layer_2.png)
+
+Compiled and fit the model using the binary_crossentropy loss function, the adam optimizer, and the accuracy evaluation metric.
+
+![](Compile_fit_model.png)
++
+Evaluated the model using the test data to determine the model’s loss and accuracy.
+
+![](EvaluateModel.png)
 
 Saved and exported the model to an HDF5 file, and name the file AlphabetSoup.h5.
 
-
 ### Optimize the Neural Network Model
 
-Using your knowledge of TensorFlow and Keras, optimize your model to improve the model's accuracy. Even if you do not successfully achieve a better accuracy, you'll need to demonstrate at least two attempts to optimize the model. You can include these attempts in your existing notebook. Or, you can make copies of the starter notebook in the same folder, rename them, and code each model optimization in a new notebook.
-
-Note You will not lose points if your model does not achieve a high accuracy, as long as you make at least two attempts to optimize the model.
-
-To do so, complete the following steps:
+Defined at least three new deep neural network models (the original plus 2 optimization attempts). With each, try to improve on your first model’s predictive accuracy.+
 
 
-Define at least three new deep neural network models (the original plus 2 optimization attempts). With each, try to improve on your first model’s predictive accuracy.
+Added 3 hidden layers.
 
-Rewind Recall that perfect accuracy has a value of 1, so accuracy improves as its value moves closer to 1. To optimize your model for a predictive accuracy as close to 1 as possible, you can use any or all of the following techniques:
+![](3_Hidden_Layers.png)
 
+Use different activation functions for the hidden layers. Displayed the accuracy scores achieved by each model, and compare the results.
 
-Adjust the input data by dropping different features columns to ensure that no variables or outliers confuse the model.
+** Accuracy Score for Model **
 
+![](AccuracyScore_Model.png)
 
-Add more neurons (nodes) to a hidden layer.
+** Accuracy Score for Model 1 **
 
+![](AccuracyScore_Model_1.png)
 
-Add more hidden layers.
+** Accuracy Score for Model 2 **
 
-
-Use different activation functions for the hidden layers.
-
-
-Add to or reduce the number of epochs in the training regimen.
-
-
-
-
-
-After finishing your models, display the accuracy scores achieved by each model, and compare the results.
-
+![](AccuracyScore_Model_2.png)
 
 Save each of your models as an HDF5 file.
 

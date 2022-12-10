@@ -6,7 +6,7 @@ I was unable to successfully execute the code on "Jupyter notebook" on my Mac. S
 
 The file "Colab_venture_funding_with_deep_learning.ipynb" is Google-colab version which can be uploaded to Google-colab and executed which runs fine.
 
-"venture_funding_with_deep_learning.ipynb" file is jupyter notebook format which fails to executes, when i try executing it - the jupyter notebook dies.
+"venture_funding_with_deep_learning.ipynb" file which is the jupyter notebook format has been removed as it fails to executes, when i try executing it - the jupyter notebook dies.
 
 ## Dev
 

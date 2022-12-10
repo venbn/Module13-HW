@@ -4,6 +4,10 @@
 
 I was unable to successfully execute the code on "Jupyter notebook" on my Mac. So, used Google Colab to complete the assignment. 
 
+The file "Colab_venture_funding_with_deep_learning.ipynb" is Google-colab version which can be uploaded to Google-colab and executed which runs fine.
+
+"venture_funding_with_deep_learning.ipynb" file is jupyter notebook format which fails to executes, when i try executing it - the jupyter notebook dies.
+
 ## Dev
 
 I use Jupyter notebook to write the Python code, this code is built in Jupyter notebook on a Mac PC. 
@@ -133,31 +137,42 @@ Save each of your models as an HDF5 file.
 
 Ensure all the below csv files are existing on the OS from where you are executing the code. You will need to run "Jupyter notebook" from the same directory (Module10-HW) where all the files exist. Below is the list of files which need to exist for the successful execution of the code.
 
-lending_data.csv
-report-template.md
-credit_risk_resampling.ipynb
+applicants_data.csv
+AlphabetSoup.h5
+AlphabetSoup_A1.h5
+AlphabetSoup_A2.h5
+Colab_venture_funding_with_deep_learning.ipynb
+venture_funding_with_deep_learning.ipynb
+Categorical Variables.png
+OneHotEncoder.png
+Add Numeric Columns.png
+SplitData-Train-Test.png
+EncodedVariables.png
+y.png
+X.png
+StandardScaler_Scaled_Data.png
+InputFeatures_A.png
+NumberofNeurons_OutputLayer.png
+Neurons_hidden_layer_1.png
+Neurons_hidden_layer_2.png
+Compile_fit_model.png
+EvaluateModel.png
+3_Hidden_Layers.png
+AccuracyScore_Model.png
+AccuracyScore_Model_1.png
+AccuracyScore_Model_2.png
 README.md
 
 Git must be installed. If using Windows GitBash must be installed.
 
 To execute the code from Windows - you will need Visual Studio Code installed as well to look at the code.
 
-The file 'crypto_investments.ipynb' is the file to be opened from the 'Jupyter notebook' interface ONLY.
+The file 'Colab_venture_funding_with_deep_learning.ipynb' is the file to be opened from the 'Jupyter notebook' interface ONLY.
 
 ## Execution process
 
 Clone the directory which contains all the .csv files and the .ipynb file to your system using the following commands
 
-git clone https://github.com/venbn/Module10-HW.git
+git clone https://github.com/venbn/Module13-HW.git
 
-Once the clone completes.. 
-
-Go to the directory "Module10-HW"
-
-cd Module10-HW
-
-Execute 'Jupyter notebook' command
-
-In the Jupyter notebook interface, open the file 'crypto_investments.ipynb'
-
-You should be able to see the code
+Upload the file Colab_venture_funding_with_deep_learning.ipynb on to Google Colab and execute the code.

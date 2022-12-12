@@ -132,6 +132,9 @@ Use different activation functions for the hidden layers. Displayed the accuracy
 ![](AccuracyScore_Model_2.png)
 
 Save each of your models as an HDF5 file.
+## Final Conclusion
+
+The original model predicts accuracy closer to 1.
 
 ## Pre-requisites
 
